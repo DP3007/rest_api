@@ -1,0 +1,21 @@
+Serwis Magazynowy
+Stock Service: Otrzymano zapytanie o stan magazynowy ID: 999
+Stock Service: Komunikuję się z Serwisem Produktów: http://localhost:8001/products/999
+Stock Service: Serwis Produktów zwrócił 404. Przekazuję błąd 404.
+127.0.0.1 - - [08/Nov/2025 15:38:32] "GET /stock/999 HTTP/1.1" 404 -
+
+Serwis Produktów
+Products Service: Otrzymano zapytanie o produkt ID: 999
+Products Service: Produkt ID 999 nie znaleziony. Zwracam 404.
+127.0.0.1 - - [08/Nov/2025 15:38:32] "GET /products/999 HTTP/1.1" 404 -
+
+Terminal
+PS C:\Users\STUDENTUM\Desktop\78678> curl -i http://localhost:8002/stock/999
+HTTP/1.1 404 NOT FOUND
+Server: Werkzeug/3.1.3 Python/3.12.6
+Date: Sat, 08 Nov 2025 14:38:32 GMT
+Content-Type: application/json
+Content-Length: 40
+Connection: close
+
+{"error":"Produkt ID 999 nie istnieje"}

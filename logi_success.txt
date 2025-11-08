@@ -1,0 +1,13 @@
+Serwis Magazyowy
+Stock Service: Otrzymano zapytanie o stan magazynowy ID: 123
+Stock Service: Komunikuję się z Serwisem Produktów: http://localhost:8001/products/123
+Stock Service: Otrzymano dane produktu. Zwracam stan magazynowy: 15
+127.0.0.1 - - [08/Nov/2025 15:36:07] "GET /stock/123 HTTP/1.1" 200 -
+
+
+
+
+Serwis Produktów
+Products Service: Otrzymano zapytanie o produkt ID: 123
+Products Service: Zwracam dane dla ID 123
+127.0.0.1 - - [08/Nov/2025 15:36:07] "GET /products/123 HTTP/1.1" 200 -
